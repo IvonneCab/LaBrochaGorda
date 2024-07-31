@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:ViewsModels="clr-namespace:LaBrochaGorda.ViewsModels"
+             x:Class="LaBrochaGorda.MainPage">
+
+    <ContentPage.BindingContext>
+        <ViewsModels:MainViewModel/>
+    </ContentPage.BindingContext>
+
+    <StackLayout>
+        <Entry Text="{Binding Alto}" Placeholder="Ingrese la altura del marco" Keyboard="Numeric" Margin="10"></Entry>
+        <Entry Text="{Binding Largo}" Placeholder="Ingrese el largo de la pared" Keyboard="Numeric" Margin="10"></Entry>
+
+        <Button Text="Calcular" Command="{Binding CalcularCommand}" Margin="10"></Button>
+        <Entry Text="{Binding R1}" Placeholder="El resultado del presupuesto es: " Margin="10"/>
+
+        <Label Text="Precio de M2 "  Margin="20"></Label>
+        <Entry Text="{Binding R2}" Placeholder="El resultado del presupuesto es: " Margin="20"/>
+    </StackLayout>
+
+
+</ContentPage>
